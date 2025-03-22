@@ -2,9 +2,6 @@
 layout: default
 ---
 
-# Ray Lao - Data Analytics & AI 📊
-
----
 
 ## 📮 Contact Information
 
