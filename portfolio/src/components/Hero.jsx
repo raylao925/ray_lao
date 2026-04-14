@@ -26,7 +26,7 @@ const Hero = () => {
     },
   }
 
-  const title = "AI 方案 & 數據科學"
+  const title = "AI Solutions & Data Science"
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-darker">
@@ -110,7 +110,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 1.2 }}
           className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8"
         >
-          從金融審計跨界至 AI 領域，結合嚴謹邏輯與創新技術，專注於機器學習、數據科學與AI方案。
+          Transitioned from financial audit into AI, combining rigorous analytical thinking with engineering execution across machine learning, data science, and AI solutions.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -126,7 +126,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 bg-primary text-white rounded-full font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all"
           >
-            查看作品
+            View Projects
           </motion.a>
           <motion.a
             href="#experience"
@@ -134,7 +134,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 border-2 border-primary/50 text-primary rounded-full font-semibold hover:bg-primary/10 transition-all"
           >
-            了解更多
+            Learn More
           </motion.a>
         </motion.div>
 

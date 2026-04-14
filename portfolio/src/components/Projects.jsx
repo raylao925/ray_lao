@@ -54,7 +54,7 @@ const Projects = () => {
               >
                 <h3 className="font-bold text-xl">{repo.name}</h3>
                 <p className="text-gray-400 my-2">
-                  {repo.description || '點擊查看項目細節'}
+                  {repo.description || 'Click to view project details'}
                 </p>
                 <div className="flex gap-4 text-sm font-mono text-gray-300">
                   <span>STAR {repo.stargazers_count}</span>
