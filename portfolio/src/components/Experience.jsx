@@ -42,31 +42,63 @@ const items = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">
-          <span className="gradient-text">Experience Timeline</span>
-        </h2>
+    <section id="experience" className="section-shell">
+      <div className="section-inner max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          <h2 className="section-title">
+            Experience <span className="gradient-text">Timeline</span>
+          </h2>
+          <p className="section-subtitle">
+            從內部審計到 AI 方案管理，我持續把流程控制、資料洞察與技術實作整合為可衡量的商業成果。
+          </p>
+        </motion.div>
 
-        <div className="relative border-l border-primary/40 pl-8 space-y-8">
+        <div className="relative mt-12 space-y-8 md:space-y-10">
+          <motion.div
+            className="absolute left-3 top-0 h-full w-px origin-top bg-[var(--color-line)] md:left-1/2"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          />
+
           {items.map((item, idx) => (
             <motion.article
               key={item.period}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -26 : 26 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="relative"
+              transition={{ duration: 0.45, delay: idx * 0.06 }}
+              className={`relative ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${
+                idx % 2 === 0 ? 'md:mr-auto md:pr-10' : 'md:ml-auto md:pl-10'
+              }`}
             >
-              <span className="absolute -left-[2.05rem] top-1 h-3 w-3 rounded-full bg-primary" />
-              <p className="text-sm text-primary font-semibold">{item.period}</p>
-              <h3 className="text-xl font-bold mt-1">{item.role}</h3>
-              <p className="text-gray-300 mb-2">{item.company}</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                {item.highlights.map((line) => (
-                  <li key={line}>- {line}</li>
-                ))}
-              </ul>
+              <span
+                className={`absolute top-7 h-3 w-3 rounded-full border border-[#06121d] bg-[var(--color-accent)] ${
+                  idx % 2 === 0
+                    ? 'left-[-1.88rem] md:left-auto md:right-[-1.7rem]'
+                    : 'left-[-1.88rem] md:left-[-1.7rem]'
+                }`}
+              />
+
+              <div className="panel rounded-3xl p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]">
+                  {item.period}
+                </p>
+                <h3 className="mt-2 text-xl font-semibold text-white">{item.role}</h3>
+                <p className="mt-1 text-sm text-[var(--color-muted)]">{item.company}</p>
+
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[var(--color-muted)]">
+                  {item.highlights.map((line) => (
+                    <li key={line}>• {line}</li>
+                  ))}
+                </ul>
+              </div>
             </motion.article>
           ))}
         </div>

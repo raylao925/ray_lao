@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 portfolio/node_modules/
-
+skills/
 # Build output
 dist/
 portfolio/dist/

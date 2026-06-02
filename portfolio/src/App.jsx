@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
@@ -8,19 +7,15 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 function App() {
-  useEffect(() => {
-    // Always use dark mode for this portfolio
-    document.documentElement.classList.add('dark')
-  }, [])
-
   return (
-    <div className="min-h-screen bg-darker text-white">
+    <div className="app-shell text-[var(--color-text)]">
+      <div className="ambient-layer" aria-hidden="true" />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Projects />
-        <Skills />
         <Experience />
+        <Skills />
         <EducationCertifications />
       </main>
       <Footer />
