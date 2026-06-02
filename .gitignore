@@ -1,8 +1,13 @@
 # Dependencies
 node_modules/
 portfolio/node_modules/
+<<<<<<< HEAD
 
 # Build outputs
+=======
+skills/
+# Build output
+>>>>>>> main
 dist/
 portfolio/dist/
 
@@ -11,12 +16,20 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+<<<<<<< HEAD
 tech_spec.md
+=======
+
+>>>>>>> main
 # OS/editor files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
+<<<<<<< HEAD
 # Local accidental lockfile at repository root
+=======
+# Keep root clean (project uses portfolio/package-lock.json)
+>>>>>>> main
 /package-lock.json
